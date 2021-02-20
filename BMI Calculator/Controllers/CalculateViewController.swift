@@ -39,9 +39,10 @@ class CalculateViewController: UIViewController {
         let height = heightSlider.value
         let weight = weightSlider.value
         
-        if segue.identifier == "goToResult" {
+        print(height, weight)
+        if segue.identifier == "goToResults" {
             let destinationVC = segue.destination as! ResultsViewController
-            destinationVC.bmiValue = "\(weight / pow(height, 2))"
+            destinationVC.bmiValue = String(format: "%.1f", (weight * pow(height, 2)))
         }
     }
 }
