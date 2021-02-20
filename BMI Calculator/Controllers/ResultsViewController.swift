@@ -16,12 +16,13 @@ class ResultsViewController: UIViewController {
     var bmiValue: String?
     
     override func viewDidLoad() {
+        // Check view loaded, update bmiLabel with calculated bmiValue
         super.viewDidLoad()
         bmiLabel.text = bmiValue
     }
     
     @IBAction func recalculatePressed(_ sender: UIButton) {
+        // Dismiss modal.
         self.dismiss(animated: true, completion: nil)
     }
-    
 }
